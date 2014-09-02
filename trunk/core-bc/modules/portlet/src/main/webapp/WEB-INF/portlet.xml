@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+  <!--
+
+    Copyright 2009 Vastra Gotalandsregionen This library is free software; you can redistribute it and/or modify it
+    under the terms of version 2.1 of the GNU Lesser General Public License as published by the Free Software
+    Foundation. This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
+    the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public
+    License for more details. You should have received a copy of the GNU Lesser General Public License along with this
+    library; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+  -->
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+  id="secure-http-core-bc-module-portlet">
+  
+  <portlet>
+    <portlet-name>melior-sesam-secure-post</portlet-name>
+    <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>view</portlet-mode>
+    </supports>
+    <portlet-info>
+      <title>Melior till Sesam</title>
+      <short-title>melior-sesam-secure-sost</short-title>
+      <keywords>melior sesam xml signature</keywords>
+    </portlet-info>
+  </portlet>
+
+  <user-attribute>
+    <description>User Login ID</description>
+    <name>user.login.id</name>
+  </user-attribute>
+
+</portlet-app>
