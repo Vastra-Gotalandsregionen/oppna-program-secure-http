@@ -86,7 +86,8 @@ public class SesamTicketService {
 
         ByteArrayOutputStream out = new ByteArrayOutputStream();
 
-        base64Encoder.encode(string.getBytes("UTF-8"), 0, string.length(), out);
+        // Sesam requires ISO-8859-1.
+        base64Encoder.encode(string.getBytes("ISO-8859-1"), 0, string.length(), out);
 
         return out.toString("UTF-8");
     }
