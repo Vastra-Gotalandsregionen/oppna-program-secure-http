@@ -8,8 +8,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.security.KeyStore;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @author Patrik Bergström
