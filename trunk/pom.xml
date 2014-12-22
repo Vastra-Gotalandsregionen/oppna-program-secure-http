@@ -26,8 +26,8 @@
   <!--NB! SCM config below assumes system name equals VGR subversion/googlecode project name! -->
   <!-- Open Source repo -->
   <scm>
-    <developerConnection>scm:svn:svn://svn.vgregion.se/vgr/secure-http/trunk</developerConnection>
-    <url>svn://svn.vgregion.se/</url>
+    <developerConnection>scm:svn:https://oppna-program-secure-http.googlecode.com/svn/trunk</developerConnection>
+    <url>http://oppna-program-secure-http.googlecode.com/svn/trunk/</url>
   </scm>
 
 </project>
