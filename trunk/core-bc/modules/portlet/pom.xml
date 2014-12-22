@@ -11,7 +11,7 @@ Generation time : 2014-03-24 10:25:47 CET
   <parent>
     <groupId>se.vgregion.secure-http</groupId>
     <artifactId>secure-http-core-bc</artifactId>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
     <relativePath>../../pom.xml</relativePath>
   </parent>
   <groupId>se.vgregion.secure-http</groupId>
