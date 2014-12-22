@@ -11,12 +11,12 @@ Generation time : 2014-03-24 10:25:47 CET
   <parent>
     <groupId>se.vgregion.secure-http</groupId>
     <artifactId>secure-http-system</artifactId>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
   </parent>
   <groupId>se.vgregion.secure-http</groupId>
   <artifactId>secure-http-core-bc</artifactId>
   <packaging>pom</packaging>
-  <version>1.0</version>
+  <version>1.1-SNAPSHOT</version>
   <name>${project.artifactId}</name>
 
   <modules>
