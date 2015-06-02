@@ -4,7 +4,8 @@ import javax.servlet.*;
 import java.io.IOException;
 
 /**
- * This filter is placed in
+ * This filter is placed in ROOT/WEB-INF/classes/... and a filter-entry is added to ROOT/WEB-INF/web.xml.
+ *
  * @author Patrik Bergström
  */
 public class Iso88591EncodingFilter implements Filter {

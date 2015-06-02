@@ -36,7 +36,6 @@
             <form id="autoSubmitSesamForm" action="${targetUrl}" method="post">
                 <span>Sesam öppnas i nytt fönster. Klicka <input type="submit" value="här"/> om det inte öppnas automatiskt.</span>
                 <input type="hidden" name="data" value="${base64SignedXml}"/>
-                    <%--<input type="submit" value="Fortsätt till Sesam"/>--%>
             </form>
         </c:when>
         <c:otherwise>
@@ -47,8 +46,22 @@
 </div>
 
 <script type="text/javascript">
+
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        var expires = "expires="+d.toUTCString();
+        document.cookie = cname + "=" + cvalue + "; " + expires;
+    }
+
     var form = document.getElementById('autoSubmitSesamForm');
+
     if (form) {
-        form.submit();
+        window.setTimeout(function () {
+            document.execCommand('ClearAuthenticationCache');
+            setCookie('VGRSESSION', '', 0);
+            form.submit();
+            //document.body.innerHTML += '<div style="position:absolute;width:100%;height:100%;opacity:1;z-index:100;background:#888;top:40%">HEJSAN</div>';
+        }, 500);
     }
 </script>
