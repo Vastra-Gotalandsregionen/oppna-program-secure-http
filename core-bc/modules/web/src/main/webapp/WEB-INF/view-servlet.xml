@@ -31,7 +31,7 @@
 
     <context:annotation-config />
 
-    <context:property-placeholder location="file:${user.home}/.rp/melior-to-sesam/application.properties"
+    <context:property-placeholder location="file:${user.home}/.app/melior-sesamlmn-integration/application.properties"
                                   ignore-resource-not-found="false"/>
 
     <bean class="se.vgregion.secure.util.KeystoreHelper">

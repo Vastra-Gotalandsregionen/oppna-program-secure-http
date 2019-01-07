@@ -1,9 +1,0 @@
-#To be placed in ${user.home}/.rp/melior-to-sesam
-
-keystore.storetype=
-keystore.file=
-keystore.alias=
-keystore.password=
-
-sesam.target.order.url=
-sesam.target.view.url=
