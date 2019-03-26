@@ -29,4 +29,9 @@
     <url>http://oppna-program-secure-http.googlecode.com/svn/trunk/</url>
   </scm>
 
+  <properties>
+    <compileSource>1.8</compileSource>
+    <compileTarget>1.8</compileTarget>
+    <spring.fw.version>4.3.18.RELEASE</spring.fw.version>
+  </properties>
 </project>

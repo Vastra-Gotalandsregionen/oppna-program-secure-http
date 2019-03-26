@@ -58,7 +58,7 @@ public class MeliorSesamMvcController {
 
         LOGGER.info("IV-user: " + ivUser + ", userFromMeliorRequest: " + userFromMeliorRequest);
 
-        if (!userFromMeliorRequest.equals(ivUser)) {
+        if (!userFromMeliorRequest.equalsIgnoreCase(ivUser)) {
             model.addAttribute("errorMessage", "Ogiltigt anrop.");
             LOGGER.error("Iv-user and user from Melior request did not match.");
             return "form";

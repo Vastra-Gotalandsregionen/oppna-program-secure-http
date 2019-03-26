@@ -23,5 +23,6 @@ Generation time : 2014-03-24 10:25:47 CET
     <module>composites/types</module>
     <module>composites/svc</module>
     <module>modules/web</module>
+    <module>modules/asynja-web</module>
   </modules>
 </project>
