@@ -1,6 +1,5 @@
 package se.vgregion.portal.secure.controller;
 
-import org.apache.log4j.lf5.util.StreamUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +12,9 @@ import org.springframework.web.util.ContentCachingRequestWrapper;
 import se.vgregion.portal.sesam.SesamTicket;
 import se.vgregion.portal.sesam.SesamTicketService;
 
-import javax.servlet.ServletInputStream;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
-import java.nio.charset.Charset;
+import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -48,12 +46,10 @@ public class AsynjaSesamMvcController {
     private String hmacKey;
 
     private static final SimpleDateFormat SDF_TIMESTAMP = new SimpleDateFormat("yyyyMMddHHmmss");
-//    private static final SimpleDateFormat SDF_DATE = new SimpleDateFormat("yyyyMMdd");
 
     static {
         SDF_TIMESTAMP.setTimeZone(TimeZone.getTimeZone("Europe/Stockholm"));
         SDF_TIMESTAMP.setLenient(false);
-//        SDF_DATE.setLenient(false);
     }
 
     @Autowired
@@ -94,6 +90,8 @@ public class AsynjaSesamMvcController {
             model.addAttribute("errorMessage", "Ogiltigt anrop.");
             return "form";
         }
+
+        parameterStringWithoutHmac = URLDecoder.decode(parameterStringWithoutHmac, "ISO-8859-1");
 
         String calculatedHmac = calculateHmac(parameterStringWithoutHmac, hmacKey);
 
