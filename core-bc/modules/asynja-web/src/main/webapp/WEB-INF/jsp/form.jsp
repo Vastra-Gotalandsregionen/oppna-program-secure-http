@@ -52,7 +52,6 @@
 
     if (form) {
         window.setTimeout(function () {
-            document.execCommand('ClearAuthenticationCache');
             setCookie('VGRSESSION', '', 0);
             form.submit();
         }, 500);
